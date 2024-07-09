@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+:root {
+    --color1: #F3E5D8;
+    --color2: #312D2C;
+    --color3: #60273F;
+    --color4: #854631;
+    --font1: 'Outfit';
+    --font2: 'Young Serif', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color1);
+    font-family: var(--font1);
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.main-h1 {
+    font-size: 250%;
+    font-family: var(--font2);
+    padding: 40px;
+}
+
+p {
+    padding-bottom: 50px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+main ul{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+main ol {
+    padding: 20px;
+    margin-bottom: 40px;
+    list-style: none;
+    counter-reset: item;
+}
+
+main li {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.o-list li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+}
+
+main ol li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    font-weight: bold; /* Deixar em negrito */
+    color: var(--color3); /* Cor desejada */
+}
+
+main h2{
+    color: var(--color3);
+    font-size: 35px;
+}
+
+.p-nutri {
+    padding-top: 25px;
+}
+
+.especial {
+    color: var(--color4);
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    background-color: #f2f2f2;
+}
